@@ -18,10 +18,8 @@ steps:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     includesymbols: true
-    versioningScheme: 'byPrereleaseNumber'
-    majorVersion: '1'
-    minorVersion: '0'
-    patchVersion: '0'
+    versioningScheme: 'byEnvVar'
+    versionEnvVar: 'Version'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'push'
