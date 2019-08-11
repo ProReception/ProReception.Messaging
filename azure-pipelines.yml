@@ -20,9 +20,3 @@ steps:
     includesymbols: true
     versioningScheme: 'byEnvVar'
     versionEnvVar: 'Version'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'push'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
-    nuGetFeedType: 'internal'
-    publishVstsFeed: '21c454c0-9785-4574-8596-c5cb3702ca19'
