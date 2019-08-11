@@ -15,8 +15,13 @@ variables:
 steps:
 - task: DotNetCoreCLI@2
   inputs:
+    command: 'build'
+    projects: '**/*.csproj'
+- task: DotNetCoreCLI@2
+  inputs:
     command: 'pack'
-    packagesToPack: 'ProReception.Messaging.csproj'
+    packagesToPack: '**/*.csproj'
+    nobuild: true
     includesymbols: true
     versioningScheme: 'byEnvVar'
     versionEnvVar: 'Version'
