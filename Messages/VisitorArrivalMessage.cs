@@ -30,5 +30,9 @@
         public PrinterType PrinterType { get; set; }
 
         public bool EnablePrinterCutter { get; set; }
+
+        public string WifiSsid { get; set; }
+
+        public string WifiPassword { get; set; }
     }
 }
