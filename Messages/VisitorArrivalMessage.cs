@@ -19,6 +19,8 @@
 
         public DateTime CheckinTime { get; set; }
 
+        public DateTime ExpectedCheckout { get; set; }
+
         public string SkypeMessage { get; set; }
 
         public string LyncMessage { get; set; }
