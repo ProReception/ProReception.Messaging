@@ -36,5 +36,34 @@
         public string WifiSsid { get; set; }
 
         public string WifiPassword { get; set; }
+
+        public string VisitPeriod
+        {
+            get
+            {
+                if (CheckinTime.Year == ExpectedCheckout.Year)
+                {
+                    if (CheckinTime.Month == ExpectedCheckout.Month)
+                    {
+                        if (CheckinTime.Day == ExpectedCheckout.Day)
+                        {
+                            return $"{CheckinTime:d MMMM, yyyy}";
+                        }
+                        else
+                        {
+                            return $"{CheckinTime:%d} - {ExpectedCheckout:d MMMM, yyyy}";
+                        }
+                    }
+                    else
+                    {
+                        return $"{CheckinTime:d MMMM} - {ExpectedCheckout:d MMMM, yyyy}";
+                    }
+                }
+                else
+                {
+                    return $"{CheckinTime:d MMMM, yyyy} - {ExpectedCheckout:d MMMM, yyyy}";
+                }
+            }
+        }
     }
 }
