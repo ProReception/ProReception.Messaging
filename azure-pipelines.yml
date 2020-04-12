@@ -15,8 +15,13 @@ variables:
 steps:
 - task: DotNetCoreCLI@2
   inputs:
+    command: 'test'
+    projects: '**/*.csproj'
+    testRunTitle: 'Unit Tests'
+- task: DotNetCoreCLI@2
+  inputs:
     command: 'pack'
-    packagesToPack: '**/*.csproj'
+    packagesToPack: '**/ProReception.Messaging.csproj'
     versioningScheme: 'byEnvVar'
     versionEnvVar: 'Version'
 - task: DotNetCoreCLI@2
