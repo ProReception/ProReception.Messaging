@@ -11,6 +11,6 @@
         [Description("Nippon")]
         Nippon = 2,
         [Description("Zebra")]
-        Zebra = 2
+        Zebra = 3
     }
 }
