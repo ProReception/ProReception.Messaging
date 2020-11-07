@@ -9,6 +9,8 @@
         [Description("Brother")]
         Brother = 1,
         [Description("Nippon")]
-        Nippon = 2
+        Nippon = 2,
+        [Description("Zebra")]
+        Zebra = 2
     }
 }
