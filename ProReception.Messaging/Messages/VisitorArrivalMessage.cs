@@ -33,7 +33,7 @@
 
         public bool EnablePrinterCutter { get; set; }
 
-        public int CutLengthForPaper { get; set; }
+        public double CutLengthForPaper { get; set; }
 
         public string WifiSsid { get; set; }
 
