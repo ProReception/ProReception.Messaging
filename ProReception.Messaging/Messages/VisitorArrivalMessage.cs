@@ -37,6 +37,8 @@
 
         public string WifiSsid { get; set; }
 
+        public string WifiUsername { get; set; }
+
         public string WifiPassword { get; set; }
 
         public string VisitPeriod
