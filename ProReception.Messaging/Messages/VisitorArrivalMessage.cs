@@ -15,6 +15,10 @@
 
         public string VisitorCompany { get; set; }
 
+        public string VisitorDivision { get; set; }
+
+        public string VisitorTypeName { get; set; }
+
         public string CardNumber { get; set; }
 
         public DateTime CheckinTime { get; set; }
