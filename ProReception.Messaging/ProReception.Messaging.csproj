@@ -1,12 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <Import Project="$(ProjectDir)../version.props" />
+
   <ItemGroup>
     <None Remove=".gitignore" />
-    <None Remove="azure-pipelines.yml" />
   </ItemGroup>
 
 </Project>
