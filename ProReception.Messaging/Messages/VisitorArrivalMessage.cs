@@ -47,6 +47,8 @@
 
         public string WifiPassword { get; set; }
 
+        public string QrCodeUrl { get; set; }
+
         public string VisitPeriod
         {
             get
