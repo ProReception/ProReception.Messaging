@@ -39,8 +39,6 @@
 
         public bool EnableMarkDetection { get; set; }
 
-        public double CutLengthForPaper { get; set; }
-
         public string WifiSsid { get; set; }
 
         public string WifiUsername { get; set; }
