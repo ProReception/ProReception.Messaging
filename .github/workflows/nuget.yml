@@ -9,25 +9,18 @@ on:
       - .github/workflows/nuget.yml
 
 jobs:
-  build:
+  nuget:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: 3.1.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
-    - name: Publish NuGet ProReception.Messaging
-      uses: brandedoutcast/publish-nuget@v2.5.5
-      with:
-        PROJECT_FILE_PATH: ProReception.Messaging/ProReception.Messaging.csproj
-        VERSION_FILE_PATH: version.props
-        PACKAGE_NAME: ProReception.Messaging
-        VERSION_REGEX: <Version>(.*)<\/Version>
-        NUGET_KEY: ${{ secrets.NUGET_API_KEY }}
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+
+      - name: Publish NuGet
+        uses: likvido/action-nuget@v1
+        with:
+          nuget-key: ${{ secrets.NUGET_API_KEY }}
+          project: ProReception.Messaging/ProReception.Messaging.csproj
