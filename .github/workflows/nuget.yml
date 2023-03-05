@@ -18,6 +18,9 @@ jobs:
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
+        
+      - name: Test
+        run: dotnet test --verbosity normal
 
       - name: Publish NuGet
         uses: likvido/action-nuget@v1
