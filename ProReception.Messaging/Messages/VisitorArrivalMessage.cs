@@ -49,6 +49,8 @@
 
         public string QrCodeUrl { get; set; }
 
+        public int LabelVersion { get; set; }
+
         public string VisitPeriod
         {
             get
