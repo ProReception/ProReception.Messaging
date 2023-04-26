@@ -16,6 +16,12 @@
             yield return new object[] { DateTime.Parse("2020-04-12"), DateTime.Parse("2021-01-05"), "12 April, 2020 - 5 January, 2021" };
         }
 
+        public static IEnumerable<object[]> GetVisitorNameTestData()
+        {
+            yield return new object[] { "Test Testesen", "Test", "Testesen" };
+            yield return new object[] { "Test Testesen Hansen", "Test", "Testesen Hansen" };
+        }
+
         [Theory]
         [MemberData(nameof(GetVisitPeriodTestData))]
         public void TestVisitPeriod(DateTime checkinTime, DateTime expectedCheckout, string expectedResult)
@@ -27,6 +33,19 @@
             };
 
             message.VisitPeriod.ShouldBe(expectedResult);
+        }
+
+        [Theory]
+        [MemberData(nameof(GetVisitorNameTestData))]
+        public void TestVisitorName(string fullName, string firstName, string lastName)
+        {
+            var message = new VisitorArrivalMessage
+            {
+                VisitorName = fullName
+            };
+
+            message.VisitorFirstName.ShouldBe(firstName);
+            message.VisitorLastName.ShouldBe(lastName);
         }
     }
 }

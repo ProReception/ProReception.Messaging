@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
 
     public class VisitorArrivalMessage
     {
@@ -12,6 +13,10 @@
         public string HostLyncUri { get; set; }
 
         public string VisitorName { get; set; }
+
+        public string VisitorFirstName => VisitorName.Split(' ')[0];
+
+        public string VisitorLastName => string.Join(" ", VisitorName.Split(' ').Skip(1));
 
         public string VisitorCompany { get; set; }
 
