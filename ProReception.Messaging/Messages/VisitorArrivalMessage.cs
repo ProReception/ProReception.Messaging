@@ -56,6 +56,8 @@
 
         public int LabelVersion { get; set; }
 
+        public IList<string> CustomAttributes { get; set; }
+
         public string VisitPeriod
         {
             get
