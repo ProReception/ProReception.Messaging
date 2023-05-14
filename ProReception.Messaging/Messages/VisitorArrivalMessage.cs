@@ -59,7 +59,7 @@
         public IList<string> CustomAttributes { get; set; }
 
         // Key = Atribute value message
-        public KeyValuePair<string, string> CustomMessages { get; set; }
+        public IList<KeyValuePair<string, string>> CustomMessages { get; set; }
 
         public string VisitPeriod
         {
