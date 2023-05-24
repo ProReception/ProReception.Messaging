@@ -56,9 +56,7 @@
 
         public int LabelVersion { get; set; }
 
-        public IList<string> CustomAttributes { get; set; }
-
-        // Key = Atribute value message
+        // Key = Label field name, Value = Label field value
         public IList<KeyValuePair<string, string>> CustomMessages { get; set; }
 
         public string VisitPeriod
