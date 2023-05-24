@@ -57,7 +57,7 @@
         public int LabelVersion { get; set; }
 
         // Key = Label field name, Value = Label field value
-        public IList<KeyValuePair<string, string>> CustomMessages { get; set; }
+        public IDictionary<string, string> CustomMessages { get; set; }
 
         public string VisitPeriod
         {
