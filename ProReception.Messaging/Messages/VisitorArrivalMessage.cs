@@ -68,7 +68,7 @@
             {
                 var cultureInfo = !string.IsNullOrEmpty(ClientSiteLocale)
                     ? new CultureInfo(ClientSiteLocale)
-                    : CultureInfo.InvariantCulture;
+                    : CultureInfo.CurrentCulture;
 
                 if (CheckinTime.Year == ExpectedCheckout.Year)
                 {

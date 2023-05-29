@@ -4,6 +4,8 @@
     using Shouldly;
     using System;
     using System.Collections.Generic;
+    using System.Globalization;
+    using System.Threading;
     using Xunit;
 
     public class VisitorArrivalMessageTests
@@ -30,6 +32,7 @@
         [MemberData(nameof(GetVisitPeriodTestData))]
         public void TestVisitPeriod(DateTime checkinTime, DateTime expectedCheckout, string clientSiteLocale, string expectedResult)
         {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             var message = new VisitorArrivalMessage
             {
                 CheckinTime = checkinTime,
