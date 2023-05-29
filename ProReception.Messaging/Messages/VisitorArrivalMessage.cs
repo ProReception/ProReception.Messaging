@@ -30,6 +30,8 @@
 
         public DateTime ExpectedCheckout { get; set; }
 
+        public string ClientSiteLocale { get; set; }
+
         public string SkypeMessage { get; set; }
 
         public string LyncMessage { get; set; }
