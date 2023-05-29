@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Globalization;
     using System.Linq;
 
     public class VisitorArrivalMessage
@@ -65,28 +66,26 @@
         {
             get
             {
+                var cultureInfo = !string.IsNullOrEmpty(ClientSiteLocale)
+                    ? new CultureInfo(ClientSiteLocale)
+                    : CultureInfo.InvariantCulture;
+
                 if (CheckinTime.Year == ExpectedCheckout.Year)
                 {
                     if (CheckinTime.Month == ExpectedCheckout.Month)
                     {
                         if (CheckinTime.Day == ExpectedCheckout.Day)
                         {
-                            return $"{CheckinTime:d MMMM, yyyy}";
+                            return $"{CheckinTime.ToString("d MMMM, yyyy", cultureInfo)}";
                         }
-                        else
-                        {
-                            return $"{CheckinTime:%d} - {ExpectedCheckout:d MMMM, yyyy}";
-                        }
+
+                        return $"{CheckinTime.ToString("%d", cultureInfo)} - {ExpectedCheckout.ToString("d MMMM, yyyy", cultureInfo)}";
                     }
-                    else
-                    {
-                        return $"{CheckinTime:d MMMM} - {ExpectedCheckout:d MMMM, yyyy}";
-                    }
+
+                    return $"{CheckinTime.ToString("d MMMM", cultureInfo)} - {ExpectedCheckout.ToString("d MMMM, yyyy", cultureInfo)}";
                 }
-                else
-                {
-                    return $"{CheckinTime:d MMMM, yyyy} - {ExpectedCheckout:d MMMM, yyyy}";
-                }
+
+                return $"{CheckinTime.ToString("d MMMM, yyyy", cultureInfo)} - {ExpectedCheckout.ToString("d MMMM, yyyy", cultureInfo)}";
             }
         }
     }
