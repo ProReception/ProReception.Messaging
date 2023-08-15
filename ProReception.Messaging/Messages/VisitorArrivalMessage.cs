@@ -7,6 +7,8 @@
 
     public class VisitorArrivalMessage
     {
+        public int ClientLevelId { get; set; }
+
         public string HostName { get; set; }
 
         public string HostSkypeId { get; set; }
