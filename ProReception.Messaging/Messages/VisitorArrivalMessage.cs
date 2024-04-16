@@ -13,8 +13,6 @@
 
         public string HostSkypeId { get; set; }
 
-        public string HostLyncUri { get; set; }
-
         public string VisitorName { get; set; }
 
         public string VisitorFirstName => VisitorName.Split(' ')[0];
@@ -37,8 +35,6 @@
 
         public string SkypeMessage { get; set; }
 
-        public string LyncMessage { get; set; }
-
         public IList<VisitorArrivalAction> Actions { get; set; }
 
         public bool KeepImWindowsOpen { get; set; }
@@ -57,7 +53,10 @@
 
         public string WifiPassword { get; set; }
 
+        [Obsolete("Use QrCodePayload instead. Deprecated on 2024-04-16")]
         public string QrCodeUrl { get; set; }
+
+        public string QrCodePayload { get; set; }
 
         public int LabelVersion { get; set; }
 
