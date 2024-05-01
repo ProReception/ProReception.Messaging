@@ -60,6 +60,8 @@
 
         public int LabelVersion { get; set; }
 
+        public string MeetingName { get; set; }
+
         // Key = Label field name, Value = Label field value
         public IDictionary<string, string> CustomMessages { get; set; }
 
