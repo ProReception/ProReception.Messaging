@@ -62,6 +62,8 @@
 
         public string MeetingName { get; set; }
 
+        public string PhotoUrl { get; set; }
+
         // Key = Label field name, Value = Label field value
         public IDictionary<string, string> CustomMessages { get; set; }
 
