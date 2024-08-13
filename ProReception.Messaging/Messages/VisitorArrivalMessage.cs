@@ -53,9 +53,6 @@
 
         public string WifiPassword { get; set; }
 
-        [Obsolete("Use QrCodePayload instead. Deprecated on 2024-04-16")]
-        public string QrCodeUrl { get; set; }
-
         public string QrCodePayload { get; set; }
 
         public int LabelVersion { get; set; }
@@ -66,6 +63,8 @@
 
         // Key = Label field name, Value = Label field value
         public IDictionary<string, string> CustomMessages { get; set; }
+
+        public string ClientSiteAreas { get; set; }
 
         public string VisitPeriod
         {
