@@ -23,6 +23,8 @@
 
         public string VisitorDivision { get; set; }
 
+        public int VisitorDivisionId { get; set; }
+
         public string VisitorTypeName { get; set; }
 
         public string CardNumber { get; set; }
