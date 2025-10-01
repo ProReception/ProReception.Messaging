@@ -68,6 +68,8 @@
 
         public string ClientSiteAreas { get; set; }
 
+        public string ComplianceText { get; set; }
+
         public string VisitPeriod
         {
             get
