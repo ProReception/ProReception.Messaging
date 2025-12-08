@@ -70,6 +70,12 @@
 
         public string ComplianceText { get; set; }
 
+        public string Custom_1 { get; set; }
+
+        public string Custom_2 { get; set; }
+
+        public string Custom_3 { get; set; }
+
         public string VisitPeriod
         {
             get
