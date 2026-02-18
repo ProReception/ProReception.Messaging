@@ -1,7 +1,7 @@
-﻿namespace ProReception.Messaging.Messages
-{
-    using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
 
+namespace ProReception.Messaging.Messages.Nested
+{
     public enum VisitorArrivalAction
     {
         PrintLabel = 0,

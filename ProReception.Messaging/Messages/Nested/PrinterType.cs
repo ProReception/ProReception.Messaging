@@ -1,7 +1,7 @@
-﻿namespace ProReception.Messaging.Messages
-{
-    using System.ComponentModel;
+﻿using System.ComponentModel;
 
+namespace ProReception.Messaging.Messages.Nested
+{
     public enum PrinterType
     {
         [Description("Dymo")]

@@ -1,4 +1,6 @@
-﻿namespace ProReception.Messaging.Messages
+﻿using ProReception.Messaging.Messages.Nested;
+
+namespace ProReception.Messaging.Messages
 {
     using System;
     using System.Collections.Generic;
